@@ -1,0 +1,390 @@
+/*global*/
+html {
+    background-color: rgb(25, 35, 42);
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0 auto;
+    font-size: 62.5%;
+    font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+}
+
+/*nav*/
+.nav {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(23, 21, 16, 32%);
+}
+
+.left-nav-list {
+    width: 66%;
+    display: flex;
+    align-items: center;
+}
+
+.left-nav-link {
+    text-decoration: none;
+    color: rgb(255, 250, 241);
+    font-size: 1.6em;
+}
+
+.left-nav-item {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding-right: 60px;
+    list-style: none;
+}
+
+.left-nav-item:hover {text-decoration: underline;}
+
+.left-nav-item:hover .nav-sublist {display: block;}
+
+.right-nav-list {
+    width: 34%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.right-nav-item {
+    list-style: none;
+    margin-left: 20px;
+}
+
+.right-nav-item:hover .right-nav-link {text-decoration: underline;}
+
+.right-nav-link {
+    text-decoration: none;
+    color: rgb(207, 205, 205);
+    font-size: 1.6em;
+}
+
+.languages select{
+    background-color: transparent;
+    border:none;
+    outline: none;
+    padding: 8px;
+    color:rgb(207, 205, 205);
+    font-size: 16px;
+}
+ 
+ option{
+    appearance: none;
+    background-color: rgb(255, 250, 241);
+    color: rgb(25, 35, 42);
+    font-size: 14px;
+}
+
+select:active, select:hover {color: rgb(25, 35, 42);}
+
+/*sublist*/
+.nav-sublist { 
+    text-align: start;
+    padding: 0;
+    padding-bottom: 20px;
+    position: absolute;
+    top: 70px;
+    background-color: rgb(229, 229, 229);
+    width: 150px;
+    display: none;
+}
+
+.sublist-item {
+    list-style: none;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+}
+
+.sublist-link {
+    text-decoration: none;
+    font-size: 1.4em;
+    color: rgb(25, 35, 42);
+}
+
+.sublist-item:hover {background-color: rgb(255, 255, 255);}
+
+/*header*/
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 462px;
+    background-color: rgb(25, 35, 42);
+    background-image: url(../img/img_header.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-logo {
+    width: 192px;
+    margin-right: auto;
+    margin-left: auto;
+    text-decoration: none;
+    text-align: center;
+}
+
+.header-logo-title {
+    font-size: 2.4em;
+    color: rgb(25, 35, 42);
+    font-family: 'Cormorant Garamond', "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+}
+
+.header-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    text-decoration: none;
+    border: 1px solid rgb(255, 232, 195);
+    color: rgb(255, 232, 195);
+    width: 128px;
+    height: 40px;
+    font-size: 1.8em;
+    margin: 3%;
+}
+
+.header-btn:hover {
+    color: rgb(25, 35, 42);
+    background-color: rgb(255, 232, 195);
+}
+
+/*content*/
+.main {
+    max-width: 1260px;
+    margin: 83px auto;
+}
+
+/*rooms*/
+.rooms {
+    display: flex;
+    width: 86.35%;
+    margin: 0 auto 128px;
+}
+
+.rooms-img{width: 60%;}
+
+.rooms-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    background-color: #fff;
+    background-image: url(../img/bg_rooms.png);
+}
+
+.rooms-title {
+    font-size: 3.6em;
+    color: rgb(25, 35, 42);
+    font-family: 'Cormorant Garamond', "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+}
+
+.rooms-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 174px;
+    height: 50px;
+    font-size: 1.8em;
+    text-decoration: none;
+    color: rgb(255, 232, 195);
+    background-color: rgb(25, 35, 42);
+    border: 1px solid rgb(25, 35, 42);
+}
+
+.rooms-btn:hover {
+    color: rgb(25, 35, 42);
+    background-color: rgb(255, 232, 195);
+    border: 1px solid rgb(25, 35, 42);
+    background-color: transparent;
+}
+
+/*wellness*/
+.wellness-img{
+    width: 100%;
+}
+
+.wellness {
+    width: 87.3%;
+    position: relative;
+    margin: 0 auto 152px;
+}
+
+.wellness-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 68%;
+}
+
+.wellness-title {
+    font-size: 3.6em;
+    color: rgb(255, 232, 195);
+    margin-bottom: 3%;
+    font-family: 'Cormorant Garamond', "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+}
+
+.wellness-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 50px;
+    border: 1px solid rgb(207, 205, 205);
+    font-size: 1.8em;
+    text-decoration: none;
+    color: rgb(255, 232, 195);
+    background-color: rgb(25, 35, 42);
+}
+
+.wellness-btn:hover {
+    color: rgb(25, 35, 42);
+    background-color: rgb(255, 232, 195);
+}
+
+/*others*/
+.others {
+    display: flex;
+    justify-content: center;
+    width: 92.7%;
+    margin: 0 auto;
+    height: 381px;
+}
+
+.others-block {position: relative;}
+
+.others-img{width: 100%;}
+
+.others-block:hover .others-block-btn {display: flex;}
+
+.others-block-btn {
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(25, 35, 42, 60%);
+    text-decoration: none;
+    color: rgb(255, 250, 241);
+    font-size: 1.8em;
+    width: 100%;
+    height: 30%;
+    display: none;
+}
+
+/*footer*/
+.footer-bar {
+    width: 100%;
+    background-color: rgb(229, 229, 229);
+    height: 45px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    height: 348px;
+    background-color: rgb(25, 35, 42);
+    background-image: url(../img/bg_footer.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    height: 220px;
+    width:100%;
+    background-color: rgba(0, 0, 0, 26%);
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 25%;
+    text-decoration: none;
+}
+
+.footer-logo-title{
+    font-size: 2.4em;
+    color: rgb(255, 250, 241);
+    font-family: 'Cormorant Garamond', "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+}
+
+.contact {
+    padding-top: 20px;
+    padding-left: 60px;
+    width: 50%;
+}
+
+.footer-title {
+    font-size: 1.8em;
+    color: rgb(255, 250, 241);
+}
+
+.contact-text {
+    font-size: 1.8em;
+    line-height: 2;
+    color: rgb(255, 250, 241);
+}
+
+.newsletter {
+    padding-right: 70px;
+    text-align: end;
+    padding-top: 20px;
+    width: 25%;
+}
+
+.footer-input {
+    margin-top: 45px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-input-text {
+    height: 35px;
+    font-size: 1.6em;
+    border: 2px solid rgb(255, 250, 241);
+    border-right: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color:rgb(255, 232, 195);
+}
+
+.newsletter-logo {margin-top: 20px;}
+
+.newsletter-logo-img{
+    margin-left: 10px;
+    height: 25px;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 70px;
+    font-size: 1.6em;
+    background-color: rgb(229, 229, 229);
+}
+
+    
