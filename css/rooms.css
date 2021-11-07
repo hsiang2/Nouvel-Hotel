@@ -121,7 +121,6 @@ select:active, select:hover {color: rgb(96, 124, 120);}
     line-height: 1.4;
     width: 78%;
     font-size: 1.6em;
-    font-family: 'Cormorant Garamond', "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
 }
 
 .deluxe-text-block{border-right: none;}
